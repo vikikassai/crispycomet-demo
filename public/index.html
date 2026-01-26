@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<title>CrispyComet – Rendelés</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="container">
+  <!-- BELÉPÉS ELŐTT: csak márka + login -->
+  <section id="login" class="card center brand-login">
+    <div class="brandline">
+      <div class="logo">☄️</div>
+      <div class="brandtext">
+        <div class="brandname">CrispyComet</div>
+        <div class="brandtag">Rendelés – demo</div>
+      </div>
+    </div>
+
+    <h2>Bejelentkezés</h2>
+    <input id="u" placeholder="Felhasználónév" autocomplete="username">
+    <input id="p" type="password" placeholder="Jelszó" autocomplete="current-password">
+    <button onclick="login()">Belépés</button>
+    <p id="msg" class="error" aria-live="polite"></p>
+  </section>
+
+  <!-- APP: belépés után -->
+  <section id="app" class="hidden">
+    <section class="menu">
+      <div class="menu-head">
+        <h2>Főoldal</h2>
+        <div class="sub">Válassz kategóriát:</div>
+      </div>
+
+      <div class="tiles" id="categoryTiles"></div>
+
+      <div class="menu-toolbar">
+        <div>
+          <h3 id="catTitle">Szendvicsek</h3>
+          <div class="sub" id="catSubtitle">Csirkés és marhás</div>
+        </div>
+        <div class="actions">
+          <button class="ghost" onclick="showAll()">Összes</button>
+          <button class="ghost" onclick="resetCart()">Kosár ürítése</button>
+        </div>
+      </div>
+
+      <div id="menuItems" class="grid"></div>
+    </section>
+
+    <aside class="cart">
+      <h3>Kosár</h3>
+      <div class="hint">Tételek: <b><span id="cartCount">0</span></b></div>
+      <div class="total">
+        Összesen: <b><span id="total">0</span> Ft</b>
+      </div>
+      <button onclick="openCart()">Kosár megtekintése</button>
+      <p class="hint small" id="orderMsg" aria-live="polite"></p>
+    </aside>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
