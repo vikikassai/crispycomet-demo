@@ -58,7 +58,7 @@ for (const s of baseSandwiches){
   if (s.name === "Comet Burger") override = "img/cometmenu.png";
   if (s.name === "Nebula Burger") override = "img/nebulamenu.png";
   if (s.name === "Spicy Comet Burger") override = "img/spicycometmenu.png";
-  // Wrap menü képet, ha van a mappában: wrapmenu.jpg
+  
   if (s.name === "Spicy Comet Wrap") override = "img/wrapmenu.png";
   menus.push(makeMenuItem(s, nextMenuId++, override));
 }

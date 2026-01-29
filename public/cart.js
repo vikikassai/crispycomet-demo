@@ -1,7 +1,6 @@
-/* Kosár oldal – localStorage alapú */
+
 const items = (() => {
-  // A kosár oldalon is kell ugyanaz a lista, ezért minimálisan újradefiniáljuk.
-  // Fontos: az ID-k egyezzenek az index oldallal.
+
   const baseSandwiches = [
     { id: 1, name: "Comet Burger", price: 2190 },
     { id: 2, name: "Nebula Burger", price: 1990 },
@@ -27,7 +26,7 @@ const items = (() => {
     { id: 44, name: "Csípős szósz", price: 390 }
   ];
 
-  // menük ára ugyanazzal a képlettel:
+ 
   const menuSidePrice = 990;
   const drinkPrice = 690;
   const menuDiscount = 280;
